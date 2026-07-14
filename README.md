@@ -1,2 +1,2 @@
 # Kutz-Univar-Website
-Kutz Univar Limited Website
+Official corporate website for Kutz Univar Limited
