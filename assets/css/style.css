@@ -69,51 +69,552 @@
     color: #ddd;
 }
 /* ===========================
-   ABOUT SECTION
+   SERVICES
 =========================== */
 
-.about{
+.services {
+    padding: 100px 0;
+}
 
-    padding:100px 0;
+.service-card {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    height: 100%;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+.service-card i {
+    font-size: 48px;
+    color: #0d6efd;
+    margin-bottom: 20px;
+}
+
+.service-card h4 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+/* ===========================
+   LOGO
+=========================== */
+
+.navbar-brand img {
+    height: 100px;
+    width: auto;
+}
+
+.navbar-brand span {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+/* ===========================
+   NAVBAR
+=========================== */
+
+.custom-navbar {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    padding: 12px 0;
+}
+
+.custom-navbar .navbar-brand span {
+    color: #0b2c5f;
+    font-weight: 700;
+}
+
+.custom-navbar .nav-link {
+    color: #1f2937;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link.active {
+    color: #0d6efd;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+}
+/* ===========================
+   PAGE HEADER
+=========================== */
+
+.page-header {
+
+    background: linear-gradient(
+        rgba(13, 110, 253, 0.85),
+        rgba(13, 110, 253, 0.85)
+    ),
+    url("../images/hero/hero-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 180px 0 100px;
+
+    text-align: center;
+
+    color: #fff;
 
 }
 
-.section-tag{
+.page-header h1{
 
+    font-size: 3.5rem;
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+
+}
+
+.page-header p{
+
+    font-size: 1.2rem;
+
+    max-width: 750px;
+
+    margin: auto;
+
+    opacity: .95;
+
+}
+/* ===========================
+   SERVICE CARDS
+=========================== */
+
+.service-card{
+
+    position: relative;
+
+    min-height: 340px;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    padding: 40px 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    color: white;
+
+    background-size: cover;
+
+    background-position: center;
+
+    transition: .4s ease;
+
+}
+.service-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,.55);
+
+}
+.service-card>*{
+
+    position:relative;
+
+    z-index:2;
+
+}
+.service-card:hover{
+
+    transform:translateY(-8px);
+
+}
+/* Service Background Images */
+
+.service-credit{
+
+    background-image:url("../images/services/credit-reports.jpg");
+
+}
+
+.service-investigation{
+
+    background-image:url("../images/services/business-investigation.jpg");
+
+}
+
+.service-debt{
+
+    background-image:url("../images/services/debt-recovery.jpg");
+
+}
+
+.service-market{
+
+    background-image:url("../images/services/market-intelligence.jpg");
+
+}
+
+.service-due{
+
+    background-image:url("../images/services/due-diligence.jpg");
+
+}
+
+.service-risk{
+
+    background-image:url("../images/services/risk-management.jpg");
+
+}
+/* ===========================
+   PROCESS SECTION
+=========================== */
+
+.process-section{
+
+    background:#f8fafc;
+
+}
+
+.process-wrapper{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:30px;
+
+    position:relative;
+
+    margin-top:60px;
+
+}
+
+.process-wrapper::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:45px;
+
+    left:8%;
+
+    width:84%;
+
+    height:4px;
+
+    background:#dbe4f0;
+
+    z-index:1;
+
+}
+
+.process-step{
+
+    flex:1;
+
+    text-align:center;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.process-icon{
+
+    width:90px;
+
+    height:90px;
+
+    background:#0d6efd;
+
+    border-radius:50%;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#fff;
+
+    font-size:2rem;
+
+    box-shadow:0 10px 25px rgba(13,110,253,.25);
+
+    transition:.3s;
+
+}
+
+.process-step:hover .process-icon{
+
+    transform:translateY(-8px) scale(1.08);
+
+    background:#084298;
+
+}
+
+.process-step h5{
+
+    margin-top:25px;
+
+    font-weight:700;
+
+}
+
+.process-step p{
+
+    color:#666;
+
+    font-size:.95rem;
+
+    line-height:1.7;
+
+}
+/* ======================
+CONTACT PAGE
+====================== */
+
+.page-banner{
+
+padding:140px 0 80px;
+
+background:#0b4f8a;
+
+color:white;
+
+text-align:center;
+
+}
+
+.page-banner h1{
+
+font-size:52px;
+
+font-weight:700;
+
+}
+
+.contact-section{
+
+padding:80px 0;
+
+}
+
+.contact-card{
+
+background:white;
+
+padding:40px;
+
+border-radius:12px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.contact-section h5{
+
+margin-top:25px;
+
+font-weight:700;
+
+color:#0b4f8a;
+
+}
+
+.contact-section a{
+
+text-decoration:none;
+
+}
+
+.contact-section .btn{
+
+margin-top:15px;
+
+}
+/* ===========================
+   PAGE HEADER
+=========================== */
+
+.page-header{
+    background:#0d6efd;
+    color:#fff;
+    padding:55px 0;
+    text-align:center;
+}
+
+.page-header h1{
+    font-size:2.5rem;
+    font-weight:700;
+    margin-bottom:10px;
+}
+
+.page-header p{
+    margin:0 auto;
+    font-size:1.1rem;
+    max-width:600px;
+}
+/* ===========================
+   CONTACT
+=========================== */
+
+<h3 class="mb-4">Get in Touch</h3>
+
+<div class="contact-card">
+
+    <h5>Office Address</h5>
+
+    <p>
+        P.O. Box 40756-00100<br>
+        Nairobi, Kenya
+    </p>
+
+    <hr>
+
+    <h5>Telephone</h5>
+
+    <p>
+        020 6650389<br>
+        020 6558616<br>
+        020 6558747<br>
+        020 650389<br>
+        020 6650390
+    </p>
+
+    <hr>
+
+    <h5>Mobile</h5>
+
+    <p>
+        +254 737 541434<br>
+        +254 795 012221
+    </p>
+
+    <hr>
+
+    <h5>Email</h5>
+
+    <p>
+        reporting@kutzunivar.com<br>
+        collection@kutzunivar.com
+    </p>
+
+</div>
+/* Navigation */
+
+.navbar-nav .nav-link{
+    color:#333;
+    font-weight:500;
+    margin-left:10px;
+    transition:0.3s;
+}
+
+.navbar-nav .nav-link:hover{
     color:#0d6efd;
+}
 
+.navbar-nav .nav-link.active{
+    color:#0d6efd !important;
     font-weight:700;
+    position:relative;
+}
 
-    letter-spacing:2px;
+.navbar-nav .nav-link.active::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    width:100%;
+    height:3px;
+    background:#0d6efd;
+    border-radius:5px;
+}
+/* ===========================
+   NAVBAR IMPROVEMENTS
+=========================== */
 
-    text-transform:uppercase;
+.navbar{
+
+    padding:12px 0;
+
+    transition:0.3s;
 
 }
 
-.section-title{
+.navbar-brand{
 
-    font-size:42px;
+    display:flex;
+
+    align-items:center;
+
+    font-size:1.4rem;
 
     font-weight:700;
-
-    margin-bottom:25px;
 
 }
 
-.about p{
+.navbar-nav .nav-link{
 
-    color:#555;
+    padding:8px 15px;
 
-    line-height:1.8;
+    font-size:16px;
+
+}
+/* ===========================
+   LOGO
+=========================== */
+
+.navbar-brand{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
 
 }
 
-.about h3{
+.navbar-brand .logo{
 
-    color:#0d6efd;
+    width:50px;
+    height:50px;
+    object-fit:contain;
 
-    font-size:42px;
+}
 
+.navbar-brand span{
+
+    font-size:1.35rem;
     font-weight:700;
+    color:#212529;
+    line-height:1;
 
 }
