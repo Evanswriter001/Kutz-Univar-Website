@@ -1,1653 +1,390 @@
-/* ===========================
-   HERO SECTION
-=========================== */
+/*==================================================
+        KUTZ UNIVAR LIMITED
+        MAIN STYLESHEET V2.0
+====================================================*/
 
-.hero {
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    background: url("../images/hero/hero-bg.jpg") center center/cover no-repeat;
-}
 
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-}
+/*=========================================
+        CSS VARIABLES
+=========================================*/
 
-.hero-content {
-    position: relative;
-    z-index: 2;
-    color: white;
-}
+:root{
 
-.hero-tag {
-    display: inline-block;
-    background: #0d6efd;
-    padding: 10px 20px;
-    border-radius: 30px;
-    margin-bottom: 20px;
-    font-size: 14px;
-    letter-spacing: 1px;
-}
+    --primary:#0B2D69;
+    --secondary:#0D6EFD;
+    --accent:#FFD54A;
 
-.hero h1 {
-    font-size: 4rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
+    --white:#ffffff;
+    --light:#f8fafc;
+    --dark:#222222;
+    --text:#555555;
 
-.hero p {
-    font-size: 1.2rem;
-    max-width: 650px;
-    margin-bottom: 30px;
-}
+    --border:#e9ecef;
 
-.hero-buttons {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 40px;
-    flex-wrap: wrap;
-}
+    --shadow-sm:0 8px 25px rgba(0,0,0,.08);
+    --shadow-md:0 15px 40px rgba(0,0,0,.12);
+    --shadow-lg:0 20px 50px rgba(0,0,0,.18);
 
-.hero-stats {
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
-}
+    --radius:18px;
 
-.hero-stats h3 {
-    font-size: 2rem;
-    margin-bottom: 5px;
-}
-
-.hero-stats span {
-    color: #ddd;
-}
-/* ===========================
-   SERVICES
-=========================== */
-
-.services {
-    padding: 100px 0;
-}
-
-.service-card {
-    background: #fff;
-    padding: 40px 30px;
-    border-radius: 15px;
-    text-align: center;
-    transition: 0.3s;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    height: 100%;
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
-}
-
-.service-card i {
-    font-size: 48px;
-    color: #0d6efd;
-    margin-bottom: 20px;
-}
-
-.service-card h4 {
-    font-weight: 600;
-    margin-bottom: 15px;
-}
-/* ===========================
-   LOGO
-=========================== */
-
-.navbar-brand img {
-    height: 100px;
-    width: auto;
-}
-
-.navbar-brand span {
-    font-size: 1.3rem;
-    font-weight: 700;
-}
-/* ===========================
-   NAVBAR
-=========================== */
-
-.custom-navbar{
-    background:#ffffff;
-    box-shadow:0 8px 30px rgba(0,0,0,.08);
-    padding:12px 0;
-    transition:.3s;
-}
-
-.navbar-brand{
-    display:flex;
-    align-items:center;
-    gap:15px;
-}
-
-.navbar-logo{
-    width:78px;
-    height:auto;
-}
-
-.company-name{
-    font-family:'Poppins',sans-serif;
-    font-size:1.6rem;
-    font-weight:700;
-    color:#0b2d69;
-    letter-spacing:.5px;
-}
-
-.navbar-nav .nav-link{
-    color:#222;
-    font-weight:600;
-    margin-left:18px;
-}
-
-.navbar-nav .nav-link:hover,
-.navbar-nav .nav-link.active{
-    color:#0b2d69;
-}
-/* ===========================
-   PAGE HEADER
-=========================== */
-
-.page-header {
-
-    background: linear-gradient(
-        rgba(13, 110, 253, 0.85),
-        rgba(13, 110, 253, 0.85)
-    ),
-    url("../images/hero/hero-bg.jpg");
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    padding: 180px 0 100px;
-
-    text-align: center;
-
-    color: #fff;
+    --transition:.35s ease;
 
 }
 
-.page-header h1{
 
-    font-size: 3.5rem;
+/*=========================================
+        RESET
+=========================================*/
 
-    font-weight: 700;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    margin-bottom: 20px;
+html{
+
+    scroll-behavior:smooth;
 
 }
 
-.page-header p{
+body{
 
-    font-size: 1.2rem;
+    font-family:'Inter',sans-serif;
 
-    max-width: 750px;
+    color:var(--text);
 
-    margin: auto;
+    background:var(--white);
 
-    opacity: .95;
-
-}
-/* ===========================
-   SERVICE CARDS
-=========================== */
-
-.service-card{
-
-    position: relative;
-
-    min-height: 340px;
-
-    border-radius: 20px;
-
-    overflow: hidden;
-
-    padding: 40px 30px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: flex-end;
-
-    color: white;
-
-    background-size: cover;
-
-    background-position: center;
-
-    transition: .4s ease;
-
-}
-.service-card::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:0;
-
-    left:0;
-
-    width:100%;
-
-    height:100%;
-
-    background:rgba(0,0,0,.55);
-
-}
-.service-card>*{
-
-    position:relative;
-
-    z-index:2;
-
-}
-.service-card:hover{
-
-    transform:translateY(-8px);
-
-}
-/* Service Background Images */
-
-.service-credit{
-
-    background-image:url("../images/services/credit-reports.jpg");
-
-}
-
-.service-investigation{
-
-    background-image:url("../images/services/business-investigation.jpg");
-
-}
-
-.service-debt{
-
-    background-image:url("../images/services/debt-recovery.jpg");
-
-}
-
-.service-market{
-
-    background-image:url("../images/services/market-intelligence.jpg");
-
-}
-
-.service-due{
-
-    background-image:url("../images/services/due-diligence.jpg");
-
-}
-
-.service-risk{
-
-    background-image:url("../images/services/risk-management.jpg");
-
-}
-/* ===========================
-   PROCESS SECTION
-=========================== */
-
-.process-section{
-
-    background:#f8fafc;
-
-}
-
-.process-wrapper{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    gap:30px;
-
-    position:relative;
-
-    margin-top:60px;
-
-}
-
-.process-wrapper::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:45px;
-
-    left:8%;
-
-    width:84%;
-
-    height:4px;
-
-    background:#dbe4f0;
-
-    z-index:1;
-
-}
-
-.process-step{
-
-    flex:1;
-
-    text-align:center;
-
-    position:relative;
-
-    z-index:2;
-
-}
-
-.process-icon{
-
-    width:90px;
-
-    height:90px;
-
-    background:#0d6efd;
-
-    border-radius:50%;
-
-    margin:auto;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    color:#fff;
-
-    font-size:2rem;
-
-    box-shadow:0 10px 25px rgba(13,110,253,.25);
-
-    transition:.3s;
-
-}
-
-.process-step:hover .process-icon{
-
-    transform:translateY(-8px) scale(1.08);
-
-    background:#084298;
-
-}
-
-.process-step h5{
-
-    margin-top:25px;
-
-    font-weight:700;
-
-}
-
-.process-step p{
-
-    color:#666;
-
-    font-size:.95rem;
+    overflow-x:hidden;
 
     line-height:1.7;
 
 }
-/* ======================
-CONTACT PAGE
-====================== */
 
-.page-banner{
 
-padding:140px 0 80px;
+/*=========================================
+        HEADINGS
+=========================================*/
 
-background:#0b4f8a;
+h1,h2,h3,h4,h5,h6{
 
-color:white;
+    font-family:'Poppins',sans-serif;
 
-text-align:center;
-
-}
-
-.page-banner h1{
-
-font-size:52px;
-
-font-weight:700;
-
-}
-
-.contact-section{
-
-padding:80px 0;
-
-}
-
-.contact-card{
-
-background:white;
-
-padding:40px;
-
-border-radius:12px;
-
-box-shadow:0 15px 40px rgba(0,0,0,.08);
-
-}
-
-.contact-section h5{
-
-margin-top:25px;
-
-font-weight:700;
-
-color:#0b4f8a;
-
-}
-
-.contact-section a{
-
-text-decoration:none;
-
-}
-
-.contact-section .btn{
-
-margin-top:15px;
-
-}
-/* ===========================
-   PAGE HEADER
-=========================== */
-
-.page-header{
-    background:#0d6efd;
-    color:#fff;
-    padding:55px 0;
-    text-align:center;
-}
-
-.page-header h1{
-    font-size:2.5rem;
-    font-weight:700;
-    margin-bottom:10px;
-}
-
-.page-header p{
-    margin:0 auto;
-    font-size:1.1rem;
-    max-width:600px;
-}
-/* ===========================
-   CONTACT
-=========================== */
-
-<h3 class="mb-4">Get in Touch</h3>
-
-<div class="contact-card">
-
-    <h5>Office Address</h5>
-
-    <p>
-        P.O. Box 40756-00100<br>
-        Nairobi, Kenya
-    </p>
-
-    <hr>
-
-    <h5>Telephone</h5>
-
-    <p>
-        020 6650389<br>
-        020 6558616<br>
-        020 6558747<br>
-        020 650389<br>
-        020 6650390
-    </p>
-
-    <hr>
-
-    <h5>Mobile</h5>
-
-    <p>
-        +254 737 541434<br>
-        +254 795 012221
-    </p>
-
-    <hr>
-
-    <h5>Email</h5>
-
-    <p>
-        reporting@kutzunivar.com<br>
-        collection@kutzunivar.com
-    </p>
-
-</div>
-/* Navigation */
-
-.navbar-nav .nav-link{
-    color:#333;
-    font-weight:500;
-    margin-left:10px;
-    transition:0.3s;
-}
-
-.navbar-nav .nav-link:hover{
-    color:#0d6efd;
-}
-
-.navbar-nav .nav-link.active{
-    color:#0d6efd !important;
-    font-weight:700;
-    position:relative;
-}
-
-.navbar-nav .nav-link.active::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-8px;
-    width:100%;
-    height:3px;
-    background:#0d6efd;
-    border-radius:5px;
-}
-/* ===========================
-   NAVBAR IMPROVEMENTS
-=========================== */
-
-.navbar{
-
-    padding:12px 0;
-
-    transition:0.3s;
-
-}
-
-.navbar-brand{
-
-    display:flex;
-
-    align-items:center;
-
-    font-size:1.4rem;
+    color:var(--primary);
 
     font-weight:700;
 
 }
 
-.navbar-nav .nav-link{
+p{
 
-    padding:8px 15px;
+    color:var(--text);
 
-    font-size:16px;
+    margin-bottom:1rem;
 
 }
-/* ==========================
-   NAVBAR LOGO
-========================== */
 
-.navbar-brand{
-    display:flex;
-    align-items:center;
-    gap:12px;
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+section{
+
+    padding:90px 0;
+
+}
+
+
+/*=========================================
+        LINKS
+=========================================*/
+
+a{
+
     text-decoration:none;
-}
 
-.navbar-logo{
-    width:65px;
-    height:65px;
-    object-fit:contain;
-}
-
-.company-name{
-    font-family:'Poppins', sans-serif;
-    font-size:1.35rem;
-    font-weight:700;
-    color:#05285F;
-}
-
-.custom-navbar{
-    background:#fff;
-    padding:12px 0;
-    box-shadow:0 2px 12px rgba(0,0,0,.08);
-}
-/*==========================
-    PAGE BANNER
-==========================*/
-
-.page-header {
-    background: linear-gradient(rgba(5, 40, 95, 0.80), rgba(5, 40, 95, 0.80)),
-                url("../images/backgrounds/africa-Network.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 160px 0 90px;
-    text-align: center;
-    color: #fff;
-}
-
-.page-header h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-
-.page-header p {
-    font-size: 1.2rem;
-    max-width: 700px;
-    margin: auto;
-    color: rgba(255,255,255,.9);
-}
-/* ==========================
-   SECTION TITLES
-========================== */
-
-.section-tag {
-    display: inline-block;
-    background: #0d6efd;
-    color: #fff;
-    padding: 8px 18px;
-    border-radius: 30px;
-    font-size: .8rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-.section-title {
-    font-size: 2.4rem;
-    font-weight: 700;
-    color: #05285f;
-    margin-bottom: 20px;
-}
-section {
-    padding-top: 80px;
-    padding-bottom: 80px;
-}
-/* ==========================
-   WHO WE SERVE
-========================== */
-
-.who-we-serve{
-
-    background:#ffffff;
+    transition:var(--transition);
 
 }
 
-.service-list{
 
-    display:flex;
+/*=========================================
+        SECTION TITLES
+=========================================*/
 
-    flex-direction:column;
+.section-tag{
 
-    gap:25px;
+    display:inline-block;
 
-}
+    padding:8px 20px;
 
-.service-item{
-
-    display:flex;
-
-    gap:20px;
-
-    align-items:flex-start;
-
-}
-
-.icon-circle{
-
-    width:60px;
-
-    height:60px;
-
-    border-radius:50%;
-
-    background:#0d6efd;
+    background:var(--secondary);
 
     color:#fff;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    font-size:28px;
-
-    flex-shrink:0;
-
-}
-
-.service-item h5{
-
-    font-weight:700;
-
-    color:#05285f;
-
-    margin-bottom:6px;
-
-}
-
-.service-item p{
-
-    margin:0;
-
-    color:#666;
-
-}
-/* ==========================
-   WHY CLIENTS
-========================== */
-
-.why-clients{
-
-    background:#f8fafc;
-
-}
-
-.feature-card{
-
-    background:#fff;
-
-    border-radius:18px;
-
-    padding:40px 30px;
-
-    text-align:center;
-
-    height:100%;
-
-    box-shadow:0 12px 35px rgba(0,0,0,.08);
-
-    transition:.35s;
-
-}
-
-.feature-card:hover{
-
-    transform:translateY(-10px);
-
-    box-shadow:0 20px 45px rgba(0,0,0,.15);
-
-}
-
-.feature-icon{
-
-    width:80px;
-
-    height:80px;
-
-    border-radius:50%;
-
-    margin:auto;
-
-    margin-bottom:25px;
-
-    background:#0d6efd;
-
-    color:#fff;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    font-size:34px;
-
-}
-
-.feature-card h3{
-
-    color:#0d6efd;
-
-    font-weight:700;
-
-    margin-bottom:8px;
-
-}
-
-.feature-card h5{
-
-    font-weight:600;
-
-    margin-bottom:15px;
-
-}
-
-.feature-card p{
-
-    color:#666;
-
-    margin:0;
-
-}
-/* ==========================
-   WORK PROCESS
-========================== */
-
-.work-process{
-
-    background:#ffffff;
-
-}
-
-.process-card{
-
-    background:#fff;
-
-    padding:35px;
-
-    border-radius:18px;
-
-    text-align:center;
-
-    height:100%;
-
-    border:1px solid #ececec;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-
-    transition:.35s;
-
-}
-
-.process-card:hover{
-
-    transform:translateY(-8px);
-
-    box-shadow:0 18px 40px rgba(0,0,0,.15);
-
-}
-
-.process-number{
-
-    width:70px;
-
-    height:70px;
-
-    margin:auto;
-
-    margin-bottom:25px;
-
-    border-radius:50%;
-
-    background:#0d6efd;
-
-    color:#fff;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    font-size:24px;
-
-    font-weight:700;
-
-}
-
-.process-card h5{
-
-    font-weight:700;
-
-    margin-bottom:15px;
-
-    color:#05285f;
-
-}
-
-.process-card p{
-
-    color:#666;
-
-    margin:0;
-
-}
-/* ==========================
-   CALL TO ACTION
-========================== */
-
-.cta-section{
-
-    position:relative;
-
-    background:url("../images/backgrounds/africa-Network.png") center center/cover no-repeat;
-
-    padding:120px 0;
-
-    color:#fff;
-
-    overflow:hidden;
-
-}
-
-.cta-overlay{
-
-    position:absolute;
-
-    top:0;
-
-    left:0;
-
-    width:100%;
-
-    height:100%;
-
-    background:rgba(5,40,95,.82);
-
-}
-
-.cta-section .container{
-
-    position:relative;
-
-    z-index:2;
-
-}
-
-.cta-section h2{
-
-    font-size:3rem;
-
-    font-weight:700;
-
-}
-
-.cta-section p{
-
-    color:rgba(255,255,255,.92);
-
-    max-width:750px;
-
-    margin:auto;
-
-}
-
-.cta-section .btn{
-
-    padding:14px 32px;
 
     border-radius:50px;
 
+    font-size:.8rem;
+
+    letter-spacing:1px;
+
     font-weight:600;
+
+    text-transform:uppercase;
 
 }
 
-.cta-section .btn-primary{
+.section-title{
 
-    background:#0d6efd;
+    font-size:2.7rem;
+
+    margin-top:20px;
+
+    margin-bottom:20px;
+
+}
+
+.lead{
+
+    max-width:760px;
+
+    margin:auto;
+
+    font-size:1.1rem;
+
+}
+
+
+/*=========================================
+        BUTTONS
+=========================================*/
+
+.btn{
+
+    border-radius:50px;
+
+    padding:14px 34px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.btn-primary{
+
+    background:var(--secondary);
 
     border:none;
 
 }
 
-.cta-section .btn-outline-light:hover{
+.btn-primary:hover{
+
+    background:var(--primary);
+
+    transform:translateY(-3px);
+
+}
+
+.btn-outline-light{
+
+    border:2px solid white;
+
+}
+
+.btn-outline-light:hover{
+
+    background:white;
+
+    color:var(--primary);
+
+}
+
+
+/*=========================================
+        NAVBAR
+=========================================*/
+
+.custom-navbar{
 
     background:#fff;
 
-    color:#05285f;
+    padding:12px 0;
 
-}
-/* ==========================
-   FOOTER
-========================== */
+    box-shadow:0 3px 20px rgba(0,0,0,.08);
 
-.footer{
+    transition:var(--transition);
 
-    background:#05285f;
-
-    color:#fff;
-
-    padding:70px 0 25px;
+    z-index:999;
 
 }
 
-.footer h4,
-.footer h5{
-
-    margin-bottom:20px;
-
-    font-weight:700;
-
-}
-
-.footer p{
-
-    color:#d7d7d7;
-
-}
-
-.footer ul{
-
-    padding:0;
-
-}
-
-.footer li{
-
-    margin-bottom:10px;
-
-}
-
-.footer a{
-
-    color:#d7d7d7;
-
-    text-decoration:none;
-
-    transition:.3s;
-
-}
-
-.footer a:hover{
-
-    color:#fff;
-
-    padding-left:5px;
-
-}
-
-.footer hr{
-
-    margin:40px 0 20px;
-
-    border-color:rgba(255,255,255,.2);
-
-}
-/* ==========================
-   COVERAGE - COUNTRIES
-========================== */
-
-.country-card{
-
-    background:#fff;
-
-    border-radius:16px;
-
-    padding:35px 20px;
-
-    text-align:center;
-
-    box-shadow:0 8px 25px rgba(0,0,0,.08);
-
-    transition:.3s;
-
-    height:100%;
-}
-
-.country-card:hover{
-
-    transform:translateY(-8px);
-
-    box-shadow:0 15px 35px rgba(0,0,0,.15);
-}
-
-.country-card{
-
-    font-size:3rem;
-}
-
-.country-card h5{
-
-    margin-top:15px;
-
-    color:#05285F;
-
-    font-weight:600;
-}
-/* ==========================
-   AFRICA NETWORK
-========================== */
-
-.coverage-network{
-
-    background:#f8fafc;
-
-}
-
-.country-list{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:18px;
-
-}
-
-.country-item{
+.navbar-brand{
 
     display:flex;
 
     align-items:center;
 
-    gap:18px;
-
-    background:#fff;
-
-    padding:18px 22px;
-
-    border-radius:14px;
-
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
-
-    transition:.3s;
+    gap:15px;
 
 }
 
-.country-item:hover{
+.navbar-logo{
 
-    transform:translateX(8px);
+    width:72px;
 
-    box-shadow:0 15px 35px rgba(0,0,0,.12);
-
-}
-
-.country-item span{
-
-    font-size:2rem;
+    height:auto;
 
 }
 
-.country-item h5{
+.company-name{
 
-    margin:0;
+    font-family:'Poppins',sans-serif;
 
-    color:#05285F;
-
-    font-weight:600;
-
-}
-
-.country-item small{
-
-    color:#777;
-
-}
-/* ==========================
-   COVERAGE FEATURES
-========================== */
-
-.coverage-feature{
-
-    background:#ffffff;
-
-    border-radius:18px;
-
-    padding:35px 25px;
-
-    text-align:center;
-
-    height:100%;
-
-    border:1px solid #e5e7eb;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-
-    transition:.35s;
-
-}
-
-.coverage-feature:hover{
-
-    transform:translateY(-8px);
-
-    box-shadow:0 20px 40px rgba(0,0,0,.15);
-
-}
-
-.coverage-feature h3{
-
-    color:#0d6efd;
-
-    font-size:2.3rem;
+    font-size:1.45rem;
 
     font-weight:700;
 
-    margin-bottom:10px;
+    color:var(--primary);
+
+    letter-spacing:.5px;
 
 }
 
-.coverage-feature p{
+.navbar-nav .nav-link{
 
-    margin:0;
+    color:#333;
 
-    color:#555;
-
-}
-/*==========================
-   COVERAGE PROCESS
-===========================*/
-
-.coverage-process{
-
-    background:#f8fafc;
-
-}
-
-.process-card{
-
-    background:#fff;
-
-    border-radius:18px;
-
-    padding:40px 30px;
-
-    text-align:center;
-
-    height:100%;
-
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-
-    transition:.35s;
-
-    border-top:5px solid #0d6efd;
-
-}
-
-.process-card:hover{
-
-    transform:translateY(-10px);
-
-    box-shadow:0 18px 40px rgba(0,0,0,.15);
-
-}
-
-.process-icon{
-
-    width:90px;
-
-    height:90px;
-
-    margin:0 auto 25px;
-
-    border-radius:50%;
-
-    background:linear-gradient(135deg,#0d6efd,#004aad);
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    color:#fff;
-
-    font-size:2.2rem;
-
-    box-shadow:0 10px 25px rgba(13,110,253,.30);
-
-}
-.process-card h4{
-
-    color:#05285F;
-
-    margin-bottom:15px;
-
-    font-weight:700;
-
-}
-
-.process-card p{
-
-    color:#666;
-
-    margin-bottom:0;
-
-}
-/*==========================
-      COVERAGE CTA
-===========================*/
-
-.coverage-cta{
-
-    background:#f8fafc;
-
-}
-
-.cta-box{
-
-    background:linear-gradient(135deg,#05285F,#0d6efd);
-
-    color:#fff;
-
-    padding:60px;
-
-    border-radius:24px;
-
-    box-shadow:0 20px 50px rgba(0,0,0,.20);
-
-}
-
-.cta-box h2{
-
-    font-size:2.3rem;
-
-    font-weight:700;
-
-    margin-bottom:20px;
-
-}
-
-.cta-box p{
-
-    opacity:.95;
-
-}
-
-.cta-box .btn{
-
-    padding:14px 30px;
+    margin-left:18px;
 
     font-weight:600;
 
-    border-radius:50px;
+    position:relative;
 
 }
 
-.cta-box .btn-outline-primary{
+.navbar-nav .nav-link:hover{
 
-    background:#fff;
-
-    color:#05285F;
-
-    border-color:#fff;
+    color:var(--secondary);
 
 }
 
-.cta-box .btn-outline-primary:hover{
+.navbar-nav .nav-link.active{
 
-    background:transparent;
-
-    color:#fff;
-
-    border-color:#fff;
-
-}
-/*==========================
-      CONTACT PAGE
-===========================*/
-
-.contact-card{
-
-    background:#ffffff;
-
-    border-radius:20px;
-
-    padding:35px;
-
-    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    color:var(--secondary);
 
 }
 
-.contact-item{
+.navbar-nav .nav-link.active::after{
 
-    display:flex;
+    content:"";
 
-    align-items:flex-start;
+    position:absolute;
 
-    gap:18px;
+    left:0;
 
-    margin-bottom:28px;
+    bottom:-8px;
 
-}
+    width:100%;
 
-.contact-item:last-child{
+    height:3px;
 
-    margin-bottom:0;
+    background:var(--secondary);
 
-}
-
-.contact-item i{
-
-    width:55px;
-
-    height:55px;
-
-    border-radius:50%;
-
-    background:#0d6efd;
-
-    color:#fff;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    font-size:1.3rem;
-
-    flex-shrink:0;
+    border-radius:5px;
 
 }
 
-.contact-item h5{
 
-    margin-bottom:6px;
+/*=========================================
+        PAGE HEADER
+=========================================*/
 
-    color:#05285F;
-
-    font-weight:600;
-
-}
-
-.contact-item p{
-
-    margin:0;
-
-    color:#666;
-
-}
-
-.contact-form{
-
-    background:#ffffff;
-
-    border-radius:20px;
-
-    padding:40px;
-
-    box-shadow:0 15px 35px rgba(0,0,0,.08);
-
-}
-
-.contact-form .form-control{
-
-    border-radius:12px;
-
-    padding:14px;
-
-}
-
-.contact-form .btn{
-
-    padding:14px 35px;
-
-    border-radius:50px;
-
-    font-weight:600;
-
-}
 .page-header{
 
     padding:170px 0 90px;
 
-}
-.contact-section{
+    text-align:center;
 
-    padding-top:40px;
+    color:white;
 
-}
-/*==========================
-      FIND US
-===========================*/
+    background:
 
-.find-us{
+    linear-gradient(rgba(5,40,95,.85),
 
-    background:#f8fafc;
+    rgba(5,40,95,.85)),
 
-}
+    url("../images/backgrounds/africa-Network.png");
 
-.map-container{
+    background-size:cover;
 
-    border-radius:20px;
-
-    overflow:hidden;
-
-    box-shadow:0 15px 35px rgba(0,0,0,.10);
+    background-position:center;
 
 }
 
-.office-card{
+.page-header h1{
 
-    background:#fff;
+    color:white;
 
-    padding:40px;
-
-    border-radius:18px;
-
-    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    font-size:3.3rem;
 
 }
 
-.office-card h4{
+.page-header p{
 
-    color:#05285F;
+    color:rgba(255,255,255,.92);
 
-    font-weight:700;
+    max-width:700px;
 
-    margin-bottom:20px;
-
-}
-
-.office-info{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:28px;
+    margin:auto;
 
 }
-
-.info-row{
-
-    display:flex;
-
-    align-items:flex-start;
-
-    gap:18px;
-
-}
-
-.info-icon{
-
-    width:45px;
-
-    height:45px;
-
-    border-radius:50%;
-
-    background:#eef5ff;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    flex-shrink:0;
-
-}
-
-.info-icon i{
-
-    color:#0d6efd;
-
-    font-size:20px;
-
-}
-
-.info-text strong{
-
-    display:block;
-
-    color:#05285F;
-
-    margin-bottom:6px;
-
-    font-size:16px;
-
-}
-
-.info-text p{
-
-    margin:0;
-
-    color:#666;
-
-    line-height:1.7;
-
-}
-
-.info-text a{
-
-    color:#0d6efd;
-
-    text-decoration:none;
-
-}
-
-.info-text a:hover{
-
-    text-decoration:underline;
-    /*==========================
-        HERO SECTION
-===========================*/
+/*==================================================
+                HERO SECTION
+==================================================*/
 
 .hero-section{
 
     position:relative;
 
-    background:linear-gradient(135deg,#05285F 0%,#0d6efd 100%);
+    min-height:100vh;
 
-    color:#fff;
+    display:flex;
+
+    align-items:center;
 
     overflow:hidden;
+
+    background:
+    linear-gradient(135deg,
+    rgba(5,40,95,.95),
+    rgba(13,110,253,.90)),
+    url("../images/hero/hero-bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    color:#fff;
 
 }
 
 .hero-overlay{
 
     position:absolute;
-
     inset:0;
-
-    background:rgba(0,0,0,.20);
+    background:rgba(0,0,0,.15);
 
 }
 
 .hero-section .container{
 
     position:relative;
-
     z-index:2;
 
 }
@@ -1656,15 +393,19 @@ section {
 
     display:inline-block;
 
-    background:rgba(255,255,255,.15);
+    padding:10px 22px;
+
+    border-radius:40px;
+
+    background:rgba(255,255,255,.12);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    backdrop-filter:blur(10px);
 
     color:#fff;
 
-    padding:8px 18px;
-
-    border-radius:50px;
-
-    font-size:14px;
+    font-size:.85rem;
 
     letter-spacing:1px;
 
@@ -1674,45 +415,53 @@ section {
 
 .hero-title{
 
-    font-size:3.4rem;
+    font-size:3.8rem;
 
-    font-weight:700;
-
-    line-height:1.2;
+    line-height:1.15;
 
     margin-bottom:25px;
+
+    color:#fff;
 
 }
 
 .hero-title span{
 
-    color:#FFD54A;
+    color:var(--accent);
 
 }
 
 .hero-text{
 
+    color:rgba(255,255,255,.90);
+
     font-size:1.15rem;
 
-    line-height:1.8;
+    max-width:680px;
 
-    max-width:650px;
-
-    margin-bottom:35px;
-
-    opacity:.95;
+    margin-bottom:40px;
 
 }
 
 .hero-buttons{
 
-    margin-bottom:55px;
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin-bottom:60px;
 
 }
 
 .hero-image{
 
     max-height:600px;
+
+    margin:auto;
+
+    filter:drop-shadow(0 30px 50px rgba(0,0,0,.30));
 
     animation:floatImage 5s ease-in-out infinite;
 
@@ -1722,9 +471,9 @@ section {
 
     display:flex;
 
-    gap:25px;
-
     flex-wrap:wrap;
+
+    gap:20px;
 
 }
 
@@ -1732,11 +481,13 @@ section {
 
     background:rgba(255,255,255,.12);
 
-    backdrop-filter:blur(10px);
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:18px;
 
     padding:22px;
-
-    border-radius:16px;
 
     min-width:170px;
 
@@ -1744,15 +495,17 @@ section {
 
 .stat-box h3{
 
+    color:var(--accent);
+
     font-size:2rem;
 
-    margin-bottom:5px;
-
-    color:#FFD54A;
+    margin-bottom:6px;
 
 }
 
 .stat-box p{
+
+    color:#fff;
 
     margin:0;
 
@@ -1763,19 +516,18 @@ section {
 @keyframes floatImage{
 
     0%{transform:translateY(0);}
-
     50%{transform:translateY(-12px);}
-
     100%{transform:translateY(0);}
 
 }
-/*==========================
-     TRUSTED CLIENTS
-===========================*/
+
+/*==================================================
+            TRUSTED CLIENTS
+==================================================*/
 
 .trusted-clients{
 
-    background:#f8f9fc;
+    background:#f7f9fc;
 
 }
 
@@ -1787,27 +539,27 @@ section {
 
     gap:30px;
 
+    margin-top:40px;
+
 }
 
 .client-logo{
 
     background:#fff;
 
-    border-radius:16px;
-
-    padding:35px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
+    border-radius:18px;
 
     height:140px;
 
-    box-shadow:0 8px 25px rgba(0,0,0,.06);
+    display:flex;
 
-    transition:.35s;
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:var(--transition);
 
 }
 
@@ -1815,7 +567,7 @@ section {
 
     transform:translateY(-8px);
 
-    box-shadow:0 18px 35px rgba(0,0,0,.12);
+    box-shadow:var(--shadow-md);
 
 }
 
@@ -1823,7 +575,7 @@ section {
 
     max-width:160px;
 
-    max-height:70px;
+    max-height:75px;
 
     object-fit:contain;
 
@@ -1842,158 +594,398 @@ section {
     opacity:1;
 
 }
-/*=========================
-        FOOTER
-==========================*/
 
-.footer-section{
-    background:#082b67;
-    color:#fff;
-    padding:80px 0 25px;
+/*==================================================
+            ABOUT SECTION
+==================================================*/
+
+.about-section{
+
+    background:#fff;
+
 }
 
-.footer-logo{
-    width:170px;
+.about-image{
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow-md);
+
 }
 
-.footer-text{
-    color:#d7dce6;
-    line-height:1.9;
+.about-image img{
+
+    width:100%;
+
 }
 
-.footer-section h5{
-    color:#fff;
-    margin-bottom:25px;
-    font-weight:700;
+.about-content{
+
+    padding-left:40px;
+
 }
 
-.footer-links{
+.about-content ul{
+
     list-style:none;
+
     padding:0;
-    margin:0;
+
+    margin-top:30px;
+
 }
 
-.footer-links li{
-    margin-bottom:12px;
-}
+.about-content li{
 
-.footer-links a{
-    color:#d7dce6;
-    text-decoration:none;
-    transition:.3s;
-}
+    margin-bottom:18px;
 
-.footer-links a:hover{
-    color:#fff;
-    padding-left:6px;
-}
-
-.footer-section p{
-    color:#d7dce6;
-    line-height:1.8;
-}
-
-.footer-divider{
-    border-color:rgba(255,255,255,.15);
-    margin:45px 0 25px;
-}
-
-.copyright{
-    margin:0;
-}
-
-.footer-section a{
-    color:#d7dce6;
-    text-decoration:none;
-}
-
-.footer-section a:hover{
-    color:#fff;
-}
-/* ================= FOOTER ================= */
-
-.site-footer{
-    background:linear-gradient(135deg,#0b2d66,#081d45);
-    color:#d9e5ff;
-    padding:80px 0 0;
-}
-
-.footer-logo{
-    width:90px;
-}
-
-.site-footer h4,
-.site-footer h5{
-    color:#fff;
-    margin-bottom:20px;
-    font-weight:700;
-}
-
-.site-footer p{
-    color:#c8d6f5;
-    line-height:1.8;
-}
-
-.footer-links,
-.footer-contact{
-    list-style:none;
-    padding:0;
-    margin:0;
-}
-
-.footer-links li,
-.footer-contact li{
     display:flex;
+
     align-items:flex-start;
-    gap:12px;
-    margin-bottom:15px;
-}
 
-.footer-links i,
-.footer-contact i{
-    color:#4da3ff;
-    font-size:18px;
-    margin-top:2px;
-    min-width:20px;
-}
+    gap:15px;
 
-.footer-links a{
-    color:#d9e5ff;
-    text-decoration:none;
-    transition:.3s;
 }
+/* =====================================================
+   HERO SECTION
+===================================================== */
 
-.footer-links a:hover{
-    color:#4da3ff;
-    padding-left:6px;
-}
-
-.footer-bottom{
-    margin-top:60px;
-    background:#06152f;
-    padding:20px 0;
-}
-
-.footer-bottom p{
-    color:#aebfdd;
-    margin:0;
-}
-
-.footer-social a{
-    display:inline-flex;
-    justify-content:center;
-    align-items:center;
-    width:42px;
-    height:42px;
-    margin-left:10px;
-    border-radius:50%;
-    background:rgba(255,255,255,.08);
+.hero-section{
+    position:relative;
+    overflow:hidden;
+    background:linear-gradient(135deg,#05285F 0%,#0D6EFD 100%);
     color:#fff;
-    transition:.3s;
-    text-decoration:none;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
 }
 
-.footer-social a:hover{
-    background:#2563eb;
-    transform:translateY(-3px);
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.25);
+}
+
+.hero-section .container{
+    position:relative;
+    z-index:2;
+}
+
+.hero-tag{
+    display:inline-block;
+    padding:10px 22px;
+    background:rgba(255,255,255,.15);
+    border-radius:50px;
+    letter-spacing:1px;
+    font-size:14px;
+    font-weight:600;
+    margin-bottom:25px;
+}
+
+.hero-title{
+    font-size:3.5rem;
+    font-weight:700;
+    line-height:1.2;
+    margin-bottom:25px;
+}
+
+.hero-title span{
+    color:#FFD54A;
+}
+
+.hero-text{
+    font-size:1.1rem;
+    line-height:1.9;
+    max-width:650px;
+    margin-bottom:35px;
+    color:rgba(255,255,255,.92);
+}
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:18px;
+    margin-bottom:60px;
+}
+
+.hero-buttons .btn{
+    padding:14px 32px;
+    border-radius:50px;
+    font-weight:600;
+}
+
+.hero-image{
+    max-width:100%;
+    max-height:600px;
+    animation:floatImage 5s ease-in-out infinite;
+}
+
+@keyframes floatImage{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+/* =====================================================
+   HERO STATISTICS
+===================================================== */
+
+.hero-stats{
+    display:flex;
+    flex-wrap:wrap;
+    gap:25px;
+}
+
+.stat-box{
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(10px);
+
+    padding:22px;
+
+    border-radius:18px;
+
+    min-width:170px;
+
+    transition:.35s;
+
+}
+
+.stat-box:hover{
+
+    transform:translateY(-8px);
+
+    background:rgba(255,255,255,.18);
+
+}
+
+.stat-box h3{
+
+    color:#FFD54A;
+
+    font-size:2rem;
+
+    margin-bottom:8px;
+
+    font-weight:700;
+
+}
+
+.stat-box p{
+
+    margin:0;
+
+    color:#fff;
+
+    font-size:.95rem;
+
+}
+/* =====================================================
+   GLOBAL SECTION STYLING
+===================================================== */
+
+section{
+    padding:90px 0;
+}
+
+.section-tag{
+
+    display:inline-block;
+
+    background:#0D6EFD;
+
+    color:#fff;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-size:.8rem;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+
+}
+
+.section-title{
+
+    color:#05285F;
+
+    font-size:2.6rem;
+
+    font-weight:700;
+
+    margin:20px 0;
+
+}
+
+.lead{
+
+    color:#666;
+
+    max-width:760px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+}
+
+.about-content i{
+
+    color:var(--secondary);
+
+    font-size:1.3rem;
+
+}
+
+/*==================================================
+            SERVICES
+==================================================*/
+
+.services{
+
+    background:var(--light);
+
+}
+
+.service-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    height:100%;
+
+    text-align:center;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:var(--transition);
+
+}
+
+.service-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+.service-card i{
+
+    width:85px;
+
+    height:85px;
+
+    margin:auto;
+
+    margin-bottom:25px;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg,var(--secondary),var(--primary));
+
+    color:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:34px;
+
+}
+
+.service-card h4{
+
+    margin-bottom:20px;
+
+}
+
+.service-card p{
+
+    margin:0;
+
+}
+
+/*==================================================
+        WHY CHOOSE US
+==================================================*/
+
+.feature-card{
+
+    background:#fff;
+
+    border-radius:18px;
+
+    padding:35px;
+
+    text-align:center;
+
+    height:100%;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:.35s;
+
+}
+
+.feature-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:var(--shadow-md);
+
+}
+
+.feature-icon{
+
+    width:80px;
+
+    height:80px;
+
+    margin:auto;
+
+    margin-bottom:25px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(135deg,var(--secondary),var(--primary));
+
+    color:#fff;
+
+    font-size:34px;
+
+}
+
+.feature-card h5{
+
+    margin-bottom:18px;
+
 }
