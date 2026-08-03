@@ -141,11 +141,15 @@ a{
 
 .section-title{
 
-    font-size:2.7rem;
+    font-family:'Poppins',sans-serif;
 
-    margin-top:20px;
+    font-size:2.35rem;
 
-    margin-bottom:20px;
+    font-weight:700;
+
+    color:#05285F;
+
+    margin-bottom:18px;
 
 }
 
@@ -155,10 +159,13 @@ a{
 
     margin:auto;
 
-    font-size:1.1rem;
+    font-size:1.05rem;
+
+    line-height:1.8;
+
+    color:#6b7280;
 
 }
-
 
 /*=========================================
         BUTTONS
@@ -415,16 +422,21 @@ a{
 
 .hero-title{
 
-    font-size:3.8rem;
+    font-family:'Poppins',sans-serif;
 
-    line-height:1.15;
+    font-size:2.9rem;
 
-    margin-bottom:25px;
+    font-weight:700;
+
+    line-height:1.2;
 
     color:#fff;
 
-}
+    margin-bottom:22px;
 
+    max-width:620px;
+
+}
 .hero-title span{
 
     color:var(--accent);
@@ -855,46 +867,52 @@ section{
 }
 
 /*==================================================
-            SERVICES
+            SERVICES PAGE
 ==================================================*/
 
-.services{
+.services-intro{
 
-    background:var(--light);
+    background:#ffffff;
 
 }
 
-.service-card{
+.services-section{
+
+    background:#f8fafc;
+
+}
+
+.service-box{
 
     background:#fff;
 
+    padding:40px 35px;
+
     border-radius:20px;
-
-    padding:35px;
-
-    height:100%;
 
     text-align:center;
 
-    box-shadow:var(--shadow-sm);
+    height:100%;
 
-    transition:var(--transition);
+    box-shadow:0 10px 35px rgba(0,0,0,.08);
+
+    transition:.35s;
 
 }
 
-.service-card:hover{
+.service-box:hover{
 
     transform:translateY(-10px);
 
-    box-shadow:var(--shadow-md);
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
 
 }
 
-.service-card i{
+.service-icon{
 
-    width:85px;
+    width:90px;
 
-    height:85px;
+    height:90px;
 
     margin:auto;
 
@@ -902,9 +920,7 @@ section{
 
     border-radius:50%;
 
-    background:linear-gradient(135deg,var(--secondary),var(--primary));
-
-    color:#fff;
+    background:linear-gradient(135deg,#0B2D69,#0D6EFD);
 
     display:flex;
 
@@ -912,52 +928,345 @@ section{
 
     align-items:center;
 
+    color:#fff;
+
     font-size:34px;
 
 }
 
-.service-card h4{
+.service-box h4{
+
+    color:#0B2D69;
+
+    margin-bottom:18px;
+
+}
+
+.service-box p{
+
+    margin:0;
+
+    color:#666;
+
+}
+/*==================================================
+            CORE SERVICES
+==================================================*/
+
+.services{
+    background:#f7f9fc;
+}
+
+/*==================================================
+            CORE SERVICES CARD
+==================================================*/
+
+.service-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    min-height:380px;
+
+    border-radius:20px;
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    transition:.4s ease;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+}
+
+/* Darker overlay for better text visibility */
+.service-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        rgba(0,0,0,.15),
+        rgba(0,0,0,.75),
+        rgba(0,0,0,.90)
+    );
+
+}
+
+/* Keep content above overlay */
+.service-content{
+
+    position:relative;
+
+    z-index:2;
+
+    padding:35px;
+
+    width:100%;
+
+}
+
+.service-content i{
+
+    font-size:46px;
+
+    color:#FFD54A;
 
     margin-bottom:20px;
 
 }
 
-.service-card p{
+.service-content h4{
+
+    color:#ffffff;
+
+    font-size:1.5rem;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+    text-shadow:0 2px 8px rgba(0,0,0,.7);
+
+}
+
+.service-content p{
+
+    color:rgba(255,255,255,.98);
+
+    font-size:1rem;
+
+    line-height:1.8;
+
+    font-weight:500;
+
+    text-shadow:0 2px 6px rgba(0,0,0,.7);
+
+}
+
+.service-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 45px rgba(0,0,0,.25);
+
+}
+.service-content{
+
+    background:rgba(0,0,0,.25);
+
+    backdrop-filter:blur(2px);
+
+    border-radius:15px;
+
+}
+
+.service-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        rgba(0,0,0,.20),
+        rgba(0,0,0,.72)
+    );
+
+}
+
+.service-content h4{
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:1.45rem;
+
+    font-weight:600;
+
+    line-height:1.35;
+
+    color:#fff;
+
+    margin-bottom:15px;
+
+}
+
+.service-content p{
+
+    font-family:'Inter',sans-serif;
+
+    font-size:.96rem;
+
+    line-height:1.8;
+
+    font-weight:400;
+
+    color:rgba(255,255,255,.92);
 
     margin:0;
 
 }
 
+.service-content i{
+
+    font-size:42px;
+
+    color:#FFD54A;
+
+    margin-bottom:20px;
+
+}
 /*==================================================
-        WHY CHOOSE US
+        SERVICE BACKGROUND IMAGES
 ==================================================*/
 
-.feature-card{
+.service-credit{
+    background-image:url("../images/services/credit-reports.jpg");
+}
+
+.service-investigation{
+    background-image:url("../images/services/business-investigation.jpg");
+}
+
+.service-debt{
+    background-image:url("../images/services/debt-recovery.jpg");
+}
+
+.service-market{
+    background-image:url("../images/services/market-intelligence.jpg");
+}
+
+.service-due{
+    background-image:url("../images/services/due-diligence.jpg");
+}
+
+.service-risk{
+    background-image:url("../images/services/risk-management.jpg");
+}
+/*==================================================
+        PROCESS
+==================================================*/
+
+.process-card h4{
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:1.35rem;
+
+    font-weight:600;
+
+    color:#05285F;
+
+    margin-bottom:15px;
+
+}
+
+.process-card p{
+
+    font-family:'Inter',sans-serif;
+
+    font-size:.96rem;
+
+    line-height:1.8;
+
+    color:#666;
+
+    margin:0;
+
+}
+/*==================================================
+        INDUSTRIES
+==================================================*/
+
+.industries{
+
+    background:#f8fafc;
+
+}
+
+.industry-card{
 
     background:#fff;
-
     border-radius:18px;
-
-    padding:35px;
-
     text-align:center;
-
-    height:100%;
-
+    padding:35px;
     box-shadow:var(--shadow-sm);
-
     transition:.35s;
 
 }
 
-.feature-card:hover{
+.industry-card:hover{
 
-    transform:translateY(-10px);
-
-    box-shadow:var(--shadow-md);
+    transform:translateY(-8px);
 
 }
 
+.industry-card i{
+
+    font-size:50px;
+    color:var(--secondary);
+    margin-bottom:20px;
+
+}
+/*==================================================
+        WHY CHOOSE US
+==================================================*/
+
+.feature-card h3{
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:2.6rem;
+
+    font-weight:700;
+
+    color:#0d6efd;
+
+    margin-bottom:10px;
+
+    line-height:1;
+
+}
+
+.feature-card h5{
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:1.3rem;
+
+    font-weight:600;
+
+    color:#05285F;
+
+    margin-bottom:18px;
+
+    line-height:1.4;
+
+}
+
+.feature-card p{
+
+    font-family:'Inter',sans-serif;
+
+    font-size:1rem;
+
+    font-weight:400;
+
+    line-height:1.8;
+
+    color:#6b7280;
+
+    margin:0;
+
+}
 .feature-icon{
 
     width:80px;
@@ -988,4 +1297,422 @@ section{
 
     margin-bottom:18px;
 
+}
+/*==================================================
+                    FOOTER
+==================================================*/
+
+.site-footer{
+
+    background:
+    linear-gradient(
+        135deg,
+        #05285F,
+        #0D6EFD
+    );
+
+    color:#fff;
+
+    padding:80px 0 0;
+
+}
+
+.footer-logo{
+
+    width:110px;
+
+}
+
+.site-footer h5{
+
+    color:#fff;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+}
+
+.site-footer p{
+
+    color:rgba(255,255,255,.85);
+
+    line-height:1.9;
+
+}
+
+.footer-links,
+
+.footer-contact{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+
+}
+
+.footer-links li,
+
+.footer-contact li{
+
+    margin-bottom:16px;
+
+}
+
+.footer-links a{
+
+    color:rgba(255,255,255,.85);
+
+    transition:.35s;
+
+}
+
+.footer-links a:hover{
+
+    color:#FFD54A;
+
+    padding-left:8px;
+
+}
+
+.footer-links i{
+
+    color:#FFD54A;
+
+    margin-right:8px;
+
+}
+
+.footer-contact li{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:15px;
+
+}
+
+.footer-contact i{
+
+    color:#FFD54A;
+
+    font-size:20px;
+
+    margin-top:4px;
+
+}
+
+.footer-social a{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.10);
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#fff;
+
+    margin-right:10px;
+
+    transition:.35s;
+
+}
+
+.footer-social a:hover{
+
+    background:#FFD54A;
+
+    color:#05285F;
+
+    transform:translateY(-5px);
+
+}
+
+.footer-bottom{
+
+    margin-top:70px;
+
+    background:rgba(0,0,0,.18);
+
+    padding:25px 0;
+
+}
+
+.footer-bottom p{
+
+    margin:0;
+
+    color:rgba(255,255,255,.85);
+
+}
+/*==================================================
+                HERO SECTION
+==================================================*/
+
+.hero-section{
+
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    background:
+    linear-gradient(rgba(5,40,95,.82), rgba(5,40,95,.82)),
+    url("../images/hero/hero-bg.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    color:#fff;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.20);
+
+}
+
+.hero-section .container{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.hero-tag{
+
+    display:inline-block;
+
+    background:rgba(255,255,255,.15);
+
+    padding:10px 20px;
+
+    border-radius:50px;
+
+    color:#fff;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    margin-bottom:25px;
+
+}
+
+.hero-title{
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:2.5rem !important;
+
+    font-weight:700;
+
+    line-height:1.2;
+
+    color:#fff;
+
+    max-width:620px;
+
+    margin-bottom:20px;
+
+}
+
+.hero-title span{
+
+    color:#FFD54A;
+
+}
+
+.hero-text{
+
+    color:rgba(255,255,255,.92);
+
+    font-size:1.15rem;
+
+    line-height:1.8;
+
+    max-width:700px;
+
+    margin-bottom:40px;
+
+}
+
+.hero-buttons{
+
+    margin-bottom:50px;
+
+}
+
+.hero-stats{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+.stat-box{
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    border-radius:16px;
+
+    padding:20px;
+
+    min-width:170px;
+
+}
+
+.stat-box h3{
+
+    color:#FFD54A;
+
+    font-size:2rem;
+
+    margin-bottom:5px;
+
+}
+
+.stat-box p{
+
+    color:#fff;
+
+    margin:0;
+
+    font-size:.95rem;
+
+}
+
+/*====================================
+ HERO TOP CAPTION
+====================================*/
+
+.carousel-item{
+
+    position:relative;
+
+}
+
+.hero-caption{
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    right:0;
+
+    padding:28px;
+
+    background:linear-gradient(
+        rgba(5,40,95,.92),
+        rgba(5,40,95,.70),
+        rgba(5,40,95,0)
+    );
+
+    color:#fff;
+
+    z-index:5;
+
+}
+
+.hero-caption h4{
+
+    color:#fff;
+
+    font-size:1.7rem;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.hero-caption p{
+
+    color:rgba(255,255,255,.92);
+
+    font-size:1rem;
+
+    line-height:1.7;
+
+    margin:0;
+
+    max-width:85%;
+
+}
+
+.carousel-inner{
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+}
+/* ==============================
+   HERO CAROUSEL
+============================== */
+
+#heroCarousel{
+    max-width:580px;
+    margin:0 auto;
+}
+
+.hero-slide-img{
+    height:520px;
+    object-fit:cover;
+    border-radius:20px;
+}
+
+.carousel-caption{
+    background:rgba(5,40,95,.78);
+    left:0;
+    right:0;
+    bottom:0;
+    padding:25px;
+    border-radius:0 0 20px 20px;
+}
+
+.carousel-caption h4{
+    color:#FFD54A;
+    font-weight:700;
+    font-size:1.6rem;
+}
+
+.carousel-caption p{
+    color:#fff;
+    font-size:1rem;
+    margin:0;
 }
